@@ -1,0 +1,10 @@
+<%= simple_form_for [@exercise, @answer, @user_answer], wrapper: :inline_form, :html=> { class: 'form-check form-check-inline' } do |f| %>
+    <%= f.simple_fields_for :answer, @answers do |answer_form| %>
+      <%= f.input_field :answer, 
+          label: 'Answer',
+          as: :radio_buttons,
+          class: 'form-check-input',
+          collection: @answers, label_method: :answer %>
+      <%= f.submit 'Submit Answer!', class: "btn btn-outline-success" %>
+    <% end %>
+<% end %>
