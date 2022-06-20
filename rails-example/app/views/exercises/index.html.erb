@@ -1,0 +1,43 @@
+<!-- Navbar -->
+
+
+<!-- BANNER -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.viewsonic.com/library/wp-content/uploads/2019/12/Technology-in-the-Classroom.jpg);">
+  <div class="container">
+    <h1>Prepara-te para os Exames!</h1>
+    <p>Começa a usar o site e a aprender!</p>
+    <div class="vertical-center">
+        <button type="button" class="btn btn btn-outline-warning my-2 my-sm-0">Começar a Aprender!</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cards para os exercícios -->
+<% if @exercises.empty? %>
+    <p>No exercises yet.</p>
+<% else %>
+<br>
+<br>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <% @exercises.each do |exercise| %> 
+                <div class="col">
+                    <%= link_to category_filter_exercises_path(:category => exercise.category), class: "card_link" do%>
+                        <div class="card">
+                            <img src="https://i0.wp.com/www.vozprof.com/wp-content/uploads/2020/12/matematica.jpg?fit=930%2C450&ssl=1" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Lista de exercícios de <%=exercise.category%>. Clica aqui para ires para os exercícios!</p>
+
+                                <button class='btn btn-outline-info my-2 my-sm-0 w-100'><%=exercise.category%></button>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+<% end %>
+
+<br>
+
+<%= link_to 'Create New Exercise', new_exercise_path %>

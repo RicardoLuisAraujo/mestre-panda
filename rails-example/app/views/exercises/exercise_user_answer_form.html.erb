@@ -1,0 +1,8 @@
+<%= simple_form_for [@exercise, @user_answer], new_exercise_user_answer_path(@exercise), wrapper: :inline_form, :html=> { class: 'form-check form-inline' } do |f| %>
+    <%= f.input_field :answer_id, 
+        label: '',
+        as: :radio_buttons, 
+        class: 'form-check-input',
+        collection: @exercise.answers.collect {|u| [u.answer] }%>
+    <%= f.submit 'Submit Answer!', class: "btn btn-outline-success" %>
+<% end %>

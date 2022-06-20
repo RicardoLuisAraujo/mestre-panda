@@ -1,0 +1,7 @@
+<div class="container">
+    <ul>
+        <% @exercises.each do |exercise| %>
+            <li><%=link_to exercise.category, exercise_path(exercise) %></li>
+        <%end%>
+    </ul>
+</div>

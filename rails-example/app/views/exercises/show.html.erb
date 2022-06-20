@@ -1,0 +1,31 @@
+<div class="container">
+  <h2 class="exercise-title">Exercício nº <%= @exercise.number %> - <%= @exercise.category %></h2>
+  <p>Problema: <%= @exercise.statement %></p>
+
+
+<br>
+  <%= link_to "Go to Real Question", new_exercise_user_answer_path(@exercise) %>
+<br>
+<%if @exercise.user_answers[-1] %>
+  <%if @exercise.user_answers[-1].answer.answer == @exercise.answers.select { |answer| answer.true_answer == true }[0].answer %>
+    <p>'True'</p>
+
+  <%end%>
+<%end%>
+
+<br>
+<br>
+<br>
+  <%= button_to "Delete #{@exercise.category} #{@exercise.number}",
+              exercise_path(@exercise),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+
+  <br>
+  <%= link_to "Edit #{@exercise.category}", edit_exercise_path(@exercise) %>
+
+
+  <br><br>
+
+  <%= link_to "Go back to Exercises", exercises_path() %>
+</div>

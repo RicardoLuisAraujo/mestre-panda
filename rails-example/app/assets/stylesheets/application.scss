@@ -1,0 +1,25 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "exercises";
+@import "navbar";
+@import "card";
+@import "banner";
+
+$gray: #F4F4F4;
+$spacer: 8px;
+
+body {
+  background: $gray; // Using this variable
+  font-family: Helvetica;
+}
+
+.btn {
+  padding: $spacer ($spacer * 3);
+}
+
+a {
+    color: grey;
+  
+    &:hover {
+      color: black;
+    }
+  }

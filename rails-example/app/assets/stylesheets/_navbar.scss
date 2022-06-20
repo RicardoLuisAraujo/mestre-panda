@@ -1,0 +1,29 @@
+.navbar-lewagon {
+    // justify-content: space-between;
+    background: white;
+    // vertical-align: middle;
+  }
+  
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+    display: flex;
+  }
+  
+  .navbar-lewagon .navbar-brand img {
+    width: 40px;
+    // vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  .avatar img {
+    width: 40px;
+  }
+  
+  .avatar-large {
+    width: 40px;
+    border-radius: 50%;
+  }
+
+
