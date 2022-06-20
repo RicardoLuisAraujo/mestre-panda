@@ -26,6 +26,7 @@ gem 'sassc-rails'
 gem 'simple_form', github: 'heartcombo/simple_form'
 gem 'popper_js', '~> 2.9.3'
 gem 'jquery-rails'
+gem 'devise'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
