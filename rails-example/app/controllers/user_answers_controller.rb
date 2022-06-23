@@ -1,5 +1,4 @@
 class UserAnswersController < ApplicationController
-
     before_action :user_answer_params
 
     def new
@@ -18,7 +17,7 @@ class UserAnswersController < ApplicationController
         @user_answer.exercise = @exercise
         @user_answer.answer = @exercise.answers.find(params[:user_answer][:answer])
         @user_answer.save
-        # redirect_to exercise_path(@exercise)
+        redirect_to exercise_user_answers_path(@exercise)
         # raise
     end
 

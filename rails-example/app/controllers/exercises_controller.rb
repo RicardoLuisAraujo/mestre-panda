@@ -1,5 +1,5 @@
 class ExercisesController < ApplicationController
-
+    # skip_before_action: authenticate_user!, only: :index
     before_action :set_exercise, only: [:show, :edit, :update, :destroy]
 
     def index
