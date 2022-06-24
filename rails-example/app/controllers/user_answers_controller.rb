@@ -18,8 +18,7 @@ class UserAnswersController < ApplicationController
         @user_answer.answer = @exercise.answers.find(params[:user_answer][:answer])
         @user_answer.user_id = current_user.id
         @user_answer.save
-        redirect_to exercise_user_answers_path(@exercise)
-        
+        redirect_to new_exercise_user_answer_path(@exercise)
     end
 
     private

@@ -1,4 +1,7 @@
 import { Application } from "@hotwired/stimulus"
+import { Chart, registerables } from 'https://cdn.skypack.dev/chart.js';
+Chart.register(...registerables);
+
 
 const application = Application.start()
 
