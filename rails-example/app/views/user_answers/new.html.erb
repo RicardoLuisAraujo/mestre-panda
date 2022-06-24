@@ -6,9 +6,8 @@
 <br>
   <%= render 'user_answer_form'%>
 <br>
-
-<%if @exercise.user_answers[-1] %>
-  <%if @exercise.user_answers[-1].answer.answer == @exercise.answers.select { |answer| answer.true_answer == true }[0].answer %>
+<%if @exercise.user_answers.find_all{|user_answer| user_answer.user_id == current_user.id} %>
+  <%if @exercise.user_answers.find_all{|user_answer| user_answer.user_id == current_user.id}[-1].answer.answer == @exercise.answers.select { |answer| answer.true_answer == true }[0].answer %>
     <p>You answered: <%=@exercise.user_answers[-1].answer.answer%></p>
     <p>Your answer is correct!</p>
   <%else%>
@@ -19,6 +18,6 @@
 
 <br>
 
-  <%= link_to "Go back to Exercises", exercises_path() %>
+  <%= link_to "Go back to Home Page", exercises_path() %>
 </div>
 

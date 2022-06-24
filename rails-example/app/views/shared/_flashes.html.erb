@@ -1,0 +1,18 @@
+<% if notice %>
+      <div class="alert alert-success alert alert-dismissible fade show" role="alert">
+        <span><strong>Yay!</strong> 🎉 you successfully signed in to our service.</span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        <%# <%= notice %>
+      </div>
+<% end %>
+<% if alert %>
+      <div class="alert alert-success alert alert-dismissible fade show" role="alert">
+        <%# <span>You successfully logged out of the site.</span> %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        <%= alert %>
+      </div>
+<% end %>

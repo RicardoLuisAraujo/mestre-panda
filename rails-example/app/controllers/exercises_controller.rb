@@ -30,8 +30,8 @@ class ExercisesController < ApplicationController
     
     def update
       # @exercise.update(exercise_params)
-      @user_answer = UserAnswer.new(exercise_id: @exercise.id, answer_id: @answer.id)
-      raise
+      # @user_answer = UserAnswer.new(exercise_id: @exercise.id, answer_id: @answer.id)
+      # raise
       redirect_to exercise_path(@exercise)
 
     end
