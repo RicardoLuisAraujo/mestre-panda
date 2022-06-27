@@ -1,24 +1,35 @@
 <div class="container exercise-page">
-  <h2 class="exercise-title">Exercício nº <%= @exercise.number %> - <%= @exercise.category %></h2>
-  <p>Problema: <%= @exercise.statement %></p>
+  <h2 class="exercise-title">Exercício de <%= @exercise.category %> - <%= @exercise.sub_category %></h2>
+  <%= image_tag @exercise.image, class: "some css class here" %>
+  <p class="exercise-source">Fonte: <%=@exercise.source%></p>
 
 
-<br>
-  <%= render 'user_answer_form'%>
-<br>
-<br>
-<%if @exercise.user_answers.find_all{|user_answer| user_answer.user_id == current_user.id} != []%>
-  <%if @exercise.user_answers.find_all{|user_answer| user_answer.user_id == current_user.id}[-1].answer.answer == @exercise.answers.select { |answer| answer.true_answer == true }[0].answer %>
-    <p>You answered: <%=@exercise.user_answers[-1].answer.answer%></p>
-    <p>Your answer is correct!</p>
-  <%else%>
-    <p>You answered: <%=@exercise.user_answers[-1].answer.answer%></p>
-    <p>You're answer is wrong!</p>
+  <div class="exercise-statement col-xs-9 col-sm-9 col-lg-6 mx-auto">
+    <%= simple_format @exercise.statement %>
+  </div>
+
+  <br>
+    <%= render 'user_answer_form'%>
+  <br>
+  <br>
+  <%if @exercise.user_answers.find_all{|user_answer| user_answer.user_id == current_user.id} != []%>
+    <%if @exercise.user_answers.find_all{|user_answer| user_answer.user_id == current_user.id}[-1].answer.answer == @exercise.answers.select { |answer| answer.true_answer == true }[0].answer %>
+      <p>A tua resposta: <%=@exercise.user_answers[-1].answer.answer%></p>
+      <p>A tua resposta está correta!</p>
+    <%else%>
+      <p>A tua resposta: <%=@exercise.user_answers[-1].answer.answer%></p>
+      <p>A tua resposta está errada</p>
+    <%end%>
+    <br>
+    <h3>Resolução do Exercício:</h3>
+    <br>
+    <div class="exercise-statement col-xs-9 col-sm-9 col-lg-6 mx-auto">    
+      <%= simple_format @exercise.resolution %>
+    </div>
   <%end%>
-<%end%>
 
-<br>
+  <br>
 
-  <%= link_to "Go back to Home Page", exercises_path() %>
+    <%= link_to "Go back to Home Page", exercises_path() %>
 </div>
 

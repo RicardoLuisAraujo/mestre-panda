@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_23_183740) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_26_180025) do
   create_table "answers", force: :cascade do |t|
     t.text "answer"
     t.boolean "true_answer"
@@ -22,10 +22,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_23_183740) do
 
   create_table "exercises", force: :cascade do |t|
     t.string "category"
-    t.integer "number"
     t.string "statement"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "sub_category"
+    t.integer "year"
+    t.string "image"
+    t.boolean "multiple_choice"
+    t.string "resolution"
+    t.string "image_resolution"
+    t.string "source"
   end
 
   create_table "profiles", force: :cascade do |t|

@@ -138,45 +138,69 @@
   </div>
 </section>
 
-
-<canvas id="myChart" width="200px" height="100px" data-labels="<%= @user_answer_dates %>" data-data="<%= @user_answer_scores %>" ></canvas>
-
+<div class="col-md-6">
+<canvas id="lineChart" width="500" height="500" data-dates="<%=@user_answer_dates %>" data-scores="<%=@user_answer_scores %>"></canvas>
+</div>
 <script>
-// document.addEventListener('turbolinks:load', () => {
-//     var ctx = document.getElementById('myChart').getContext('2d');
-//     var myChart = new Chart(ctx, {
-//     type: 'line',
-//     data: {
-//       labels: JSON.parse(ctx.canvas.dataset.labels),
-//       datasets: [{
-//         data: JSON.parse(ctx.canvas.dataset.data),
-//       }]
-//     },
-//     });
-//   })
-var xyValues = [
-  {x:50, y:7},
-  {x:60, y:8},
-  {x:70, y:8},
-  {x:80, y:9},
-  {x:90, y:9},
-  {x:100, y:9},
-  {x:110, y:10},
-  {x:120, y:11},
-  {x:130, y:14},
-  {x:140, y:14},
-  {x:150, y:15}
-];
-new Chart("myChart", {
-  type: "scatter",
-  data: {
-    datasets: [{
-      pointRadius: 4,
-      pointBackgroundColor: "rgba(0,0,255,1)",
-      data: xyValues
-    }]
-  },
-});
+// Data for Line Chart
+
+var userAnswers = document.getElementById('lineChart');
+const dates = userAnswers.dataset.dates;
+const high_prices_spot = userAnswers.dataset.scores;
+console.log(dates)
+console.log(high_prices_spot)
+
+const data = {
+    labels: dates,
+    datasets: [ {
+            label: 'User Score',
+            backgroundColor: 'rgb(0, 0, 255)',
+            borderColor: 'rgb(0, 0, 255)',
+            data: high_prices_spot
+        }]
+};
+
+const config_line = {
+    type: 'line',
+    data: data,
+    options: {
+        responsive: false,
+        plugins: {
+            legend: {
+                position: 'top'
+            },
+            title: {
+                display: true,
+                text: 'Stock High Price Comparison'
+            }
+        }
+    }
+};
+
+const myLineChart = new Chart(document.getElementById('lineChart'), config_line);
+// var xyValues = [
+//   {x:50, y:7},
+//   {x:60, y:8},
+//   {x:70, y:8},
+//   {x:80, y:9},
+//   {x:90, y:9},
+//   {x:100, y:9},
+//   {x:110, y:10},
+//   {x:120, y:11},
+//   {x:130, y:14},
+//   {x:140, y:14},
+//   {x:150, y:15}
+// ];
+// new Chart("myChart", {
+//   type: "scatter",
+//   data: {
+//     datasets: [{
+//       pointRadius: 4,
+//       pointBackgroundColor: "rgba(0,0,255,1)",
+//       data: xyValues
+//     }]
+//   },
+// });
 
 
   </script>

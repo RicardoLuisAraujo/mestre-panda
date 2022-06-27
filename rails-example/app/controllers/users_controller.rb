@@ -5,8 +5,13 @@ class UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
 
-        @user_answer_dates = [1, 2, 3]#@user.user_answers.map{|user_answer| user_answer.exercise}.map{|exercise| exercise.created_at}
+        @user_answer_dates = @user.user_answers.map{|user_answer| user_answer.created_at.to_date}
+
         @user_answer_scores = @user.user_answers.map{|user_answer| user_answer.answer}.map{|answer| answer.true_answer}
+        @user_answer_scores = @user_answer_scores.map{|score| score ? 1:0}
+        raise
+        @user_answer_scores_dict = Hash[@user_answer_dates.zip(@user_answer_scores)]
+        
     end
 
     def require_same_user
