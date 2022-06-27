@@ -1,16 +1,19 @@
 <div class="container exercise-page">
-  <h2 class="exercise-title">Exercício de <%= @exercise.category %> - <%= @exercise.sub_category %></h2>
-  <%= image_tag @exercise.image, class: "some css class here" %>
-  <p class="exercise-source">Fonte: <%=@exercise.source%></p>
+  <h2 class="exercise-title">Exercício <%= @exercise.id %> de <%= @exercise.category %> - <%= @exercise.sub_category %></h2>
 
-
-  <div class="exercise-statement col-xs-9 col-sm-9 col-lg-6 mx-auto">
-    <%= simple_format @exercise.statement %>
+  <div class="exercise-statement col-xs-12 col-sm-12 col-lg-8 mx-auto">
+    <div class="card">
+      <%= image_tag @exercise.image, class: "mx-auto image-centered" %>
+      <p class="exercise-source text-center text-muted">Fonte: <%=@exercise.source%></p> 
+      <div class="card-body text-justify"> 
+        <%= simple_format @exercise.statement %>
+      </div>
+    </div>
   </div>
 
   <br>
-    <%= render 'user_answer_form'%>
-  <br>
+
+  <%= render 'user_answer_form'%>
   <br>
   <%if @exercise.user_answers.find_all{|user_answer| user_answer.user_id == current_user.id} != []%>
     <%if @exercise.user_answers.find_all{|user_answer| user_answer.user_id == current_user.id}[-1].answer.answer == @exercise.answers.select { |answer| answer.true_answer == true }[0].answer %>
@@ -18,7 +21,7 @@
       <p>A tua resposta está correta!</p>
     <%else%>
       <p>A tua resposta: <%=@exercise.user_answers[-1].answer.answer%></p>
-      <p>A tua resposta está errada</p>
+      <p>A tua resposta está errada.</p>
     <%end%>
     <br>
     <h3>Resolução do Exercício:</h3>
@@ -28,8 +31,9 @@
     </div>
   <%end%>
 
-  <br>
-
+    <br>
     <%= link_to "Go back to Home Page", exercises_path() %>
+    <br>
+    <!--<%#= link_to "Go to Next Exercise", new_exercise_user_answer(@exercise.next) %>-->
 </div>
 

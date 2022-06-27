@@ -1,0 +1,39 @@
+.list-group input[type="radio"] {
+    display: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .list-group input[type="radio"] + .list-group-item {
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .list-group input[type="radio"] + .list-group-item:before {
+    content: "\2022";
+    color: transparent;
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+  
+  .list-group input[type="radio"]:checked + .list-group-item {
+    background-color: #0275D8;
+    color: #FFF;
+  }
+  
+  .list-group input[type="radio"]:checked + .list-group-item:before {
+    color: inherit;
+  }
+
+.collection-radio-buttons {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+label {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+}

@@ -5,3 +5,7 @@ class Exercise < ApplicationRecord
 
     accepts_nested_attributes_for :answers, :user_answers
 end
+
+def next
+    Exercise.first(:conditions => ['id > ?', self.id], :order => 'id ASC')
+  end

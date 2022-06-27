@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
         @user_answer_scores = @user.user_answers.map{|user_answer| user_answer.answer}.map{|answer| answer.true_answer}
         @user_answer_scores = @user_answer_scores.map{|score| score ? 1:0}
-        raise
+        
         @user_answer_scores_dict = Hash[@user_answer_dates.zip(@user_answer_scores)]
         
     end

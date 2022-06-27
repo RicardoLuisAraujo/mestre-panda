@@ -4,6 +4,7 @@
 @import "card";
 @import "banner";
 @import "flashes";
+@import "form_user_answer";
 
 $gray: #F4F4F4;
 $spacer: 8px;
@@ -11,6 +12,10 @@ $spacer: 8px;
 body {
   background: $gray; // Using this variable
   font-family: Helvetica;
+}
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .btn {
