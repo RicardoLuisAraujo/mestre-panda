@@ -3,7 +3,7 @@
 
   <div class="exercise-statement col-xs-12 col-sm-12 col-lg-8 mx-auto">
     <div class="card">
-      <%= image_tag @exercise.image, class: "mx-auto image-centered" %>
+      <%# <%= image_tag @exercise.image, class: "mx-auto image-centered" %> %>
       <p class="exercise-source text-center text-muted">Fonte: <%=@exercise.source%></p> 
       <div class="card-body text-justify"> 
         <%= simple_format @exercise.statement %>

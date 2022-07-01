@@ -1,0 +1,131 @@
+ID;year;category;sub_category;statement;image;multiple_choice;option_1;option_2;option_3;option_4;true_answer;resolution;image_resolution;source;
+1;10;Geometria;Pontos, retas e planos;"Na figura ao lado, está representada, num referencial o.n. xOy, a reta AB.
+
+Sabe-se que:
+• o ponto A pertence ao semieixo negativo Ox e o ponto B pertence ao semieixo positivo Oy
+• a reta AB tem equação y=2x+4
+Seja M o ponto médio do segmento de reta [AB].
+
+Quais são as coordenadas do ponto M ?";q_1;true;(-1/2, 2);(-1, 2);(-1/4, 1/2);(-2, 4);(-1,2);"Como o ponto B pertence ao semieixo positivo Oy e à reta de equação y = 2x + 4, as suas coordenadas são (0,4)
+
+Como o ponto A pertence ao semieixo negativo Ox, tem ordenada nula, pelo que a sua abcissa é: 0 = 2x + 4 ⇔ −4 = 2x ⇔ −42 = x ⇔ −2 = x
+
+Assim, as coordenadas do ponto médio, M, do segmento de reta [AB], são: 
+((𝑥𝐴+𝑥𝐵)/2  ,  (𝑦𝐴+𝑦𝐵)/2)= ((−2+0)/2,  (0+4)/2) = (-1,2)";;Exame - 2019, 2ª fase;
+2;10;Geometria;Pontos, retas e planos;"Na figura ao lado, está representado, num referencial o.n. Oxyz, um cilindro de revolução de altura 3.
+
+Sabe-se que: 
+• o ponto A tem coordenadas (1,2,0) e é o centro da base inferior do cilindro, a qual está contida no plano xOy 
+• o ponto B tem coordenadas (1,3,0) e pertence à circunferência que delimita a base inferior do cilindro; 
+• o ponto C é o centro da base superior do cilindro.
+
+Determine a área da secção produxida no cilindro pelo plano de equação x = 1.
+";q_2;false;;;;;6;"Como os pontos A, B e C têm abcissa 1, todos pertencem ao plano de equação x = 1. Assim a seçcão produzida no cilindro pelo plano de equação x = 1, é o retângulo que contem estes pontos, ou seja o retângulo cujos lados são o diâmetro da base (2) e a altura (3) do cilindro, pelo que a sua área é: 
+
+A = 2 * 3 = 6";q_2_r;Exame - 2017, Época especial;
+3;10;Geometria;Pontos, retas e planos;"Considere, num referencial o.n. xOy, os pontos A(−1,3) e B(2,4). 
+
+Qual das seguintes equações define uma reta paralela à reta AB ?";;true;y = -1/3x;y = 1/3x;y = 3x;y = -33x;y = 1/3x;"O declive da reta AB é dado por:
+𝑚𝐴𝐵=  (𝑦𝐵 −𝑦𝐴 )/(𝑥𝐵 −𝑥𝐴) = (4−3)/(2 −(−1)) = 1/(2+1 ) = 1/3
+Como retas paralelas têm o mesmo declive, de entre as opções apresentadas a única reta paralela à reta AB é a que tem declive 1/3";;Exame - 2016, Época especial;
+4;10;Geometria;Pontos, retas e planos;"Na figura ao lado, está representado, num referencial o.n. Oxyz, o cubo [OPQRSTUV] de aresta 2.
+
+Os pontos, P, R e T pertencem aos semieixos positivos. 
+Numa das opcções seguintes estão as coordenadas de um ponto pertencente a uma das arestas do cubo.
+Em qual?
+";q_4;true;(1, 1, 2);(1, 2, 0);(0, 1, 1);(1, 1, 1);(1,2,0);"Representando os quatro pontos, podemos verificar que: 
+• o ponto A(1,1,2) pertence à face [STUV], mas não a qualquer uma das arestas
+• o ponto B(1,2,0) pertence à aresta [QR] 
+• o ponto C(1,1,0) pertence à face [OPQR], mas não a qualquer uma das arestas
+• o ponto D(1,1,1) é o centro do cubo, mas não pertence a qualquer uma das arestas";q_4_r;Teste Intermédio 10º ano - 16.03.2012;
+5;10;Geometria;Pontos, retas e planos;"Considere, num referencial o.n. xOy :
+• a reta r, definida pela equação y = 2x − 1 
+• o ponto A de coordenadas (0, − 2) 
+
+Escreva a equação reduzida da reta paralela à reta r que passa no ponto A ";q_5;false;;;;;y = 2x -2;"Como a reta deve ser paralela à reta r deve ter o mesmo declive, ou seja, mr = 2. Como deve conter o ponto A (cuja abcissa é nula) então a ordenada na origem é igual à ordenada do ponto A.
+
+Assim a equação reduzida, da reta paralela à reta r que passa no ponto A, é:
+
+y= mrx + yA ⇔ y= 2x−2 
+";;Teste Intermédio 10º ano - 16.03.2012;
+6;10;Geometria;Pontos, retas e planos;"Na figura ao lado, está representado, em referencial o.n. Oxyz, o prisma quadrangular regular [ABCDEFGH].
+
+As coordenadas dos pontos A, B e G são (11, − 1,2), (8,5,0) e (6,9,15), respectivamente.
+
+Escreva uma condição que defina a reta que passa no ponto G e que é  paralela ao eixo Oy.";q_6;false;;;;;x = 6 ∧ z = 15;"Como a reta deve ser paralela ao eixo Oy pode ser definida pela interseção de dois planos, perpendiculares aos eixos Ox e Oz, respetivamente.
+
+Como a reta deve conter o ponto G(6,9,15), o plano perpendicular ao eixo Ox é o plano de equação x = 6 e o plano perpendicular ao eixo das cotas é o plano definido por z = 15
+
+Assim, uma condição que define a reta que passa no ponto G e que é paralela ao eixo Oy, é:
+
+x = xG ∧ z = zG ⇔ x = 6 ∧ z = 15";q_6_r;Teste Intermédio 10º ano - 06.05.2011;
+7;10;Geometria;Pontos, retas e planos;"Na figura ao lado, está representado, em referencial o.n. Oxyz , o poliedro [VNOPQURST], que se pode decompor num cubo e numa pirâmide quadrangular regular. 
+
+Sabe-se que:
+• a base da pirâmide coincide com a face superior do cubo e está contida no plano xOy 
+• o ponto P pertence ao eixo Ox
+• o ponto U tem coordenadas (4, −4, −4)
+
+Escreva uma condição cartesiana que defina o plano perpendicular à reta QN e que passa no ponto V";q_7;false;;;;;;"Como a reta QN é paralela ao eixo Ox, e como se pretende que o plano seja perpendicular à reta QN também será perpendicular ao eixo Ox, ou seja, é definido por uma equação do tipo x = k, k ∈ R
+
+Como se pretende que o plano contenha o ponto V, então o valor de k é a abcissa do ponto V, (k = xV).
+A abcissa do ponto V é metade da abcissa do ponto Q, ou do ponto U, então temos que a equação do plano perpendicular à reta QN e que passa no ponto V é:
+
+x = xU/2 ⇔ x = 4/2 ⇔ x = 2";;Teste Intermédio 11º ano - 27.01.2011;
+8;10;Geometria;Pontos, retas e planos;"Considere, num referencial o.n. xOy, a reta r que interseta o eixo Ox no ponto de abcissa 2 e que interseta o eixo Oy no ponto de ordenada 8
+
+Qual é a equação reduzida da reta r?";;true;y = -4x + 8;y = 4x + 8;y = -2x + 4;y = 2x + 4;y = -4x + 8;"Como a reta r que interseta o eixo Oy no ponto de ordenada 8, ou seja no ponto de coordenadas B(0,8) a respetiva ordenada na origem é 8.
+
+Como interseta o eixo Ox no ponto de abcissa 2, ou seja, como também contém o ponto de coordenadas A(2,0), o declive é dado por:
+
+mr = (𝑦𝐵 −𝑦𝐴)/(𝑥𝐵 −𝑥𝐴) = (8 −0)/(0 −2) = (8 )/(−2) = -4
+Assim, a equação reduzida da reta r é: y = −4x + 8";;Teste Intermédio 10º ano - 05.05.2010;
+9;10;Geometria;Pontos, retas e planos;"Na figura ao lado, estão representados, num referencial o.n. Oxyz, um prisma quadrangular regular e uma pirâmide.
+
+A base da pirâmide, [OPQR], está contida no plano xOy e coincide com a base inferior do prisma.
+
+O ponto W, vértice da pirâmide, coincide com o centro da base superior, [STUV], do prisma.
+
+O ponto P tem coordenadas (5,0,0).
+
+Sabe-se que o volume da pirâmide é igual a 75
+Determine as coordenadas do ponto W, vértice da pirâmide.";q_9;false;;;;;(5/2, 5/2, 9);"Como a base da pirâmide, [OPQR], é um quadrado e o ponto P tem coordenadas (5,0,0) e o ponto o ponto O tem coordenadas (0,0,0), temos que 𝑂𝑃 ̅= 5, e a área da base é: 
+
+A[OPQR] = 𝑂𝑃 ̅2 = 52 = 25
+
+Como o volume da pirâmide é igual a 75, podemos determinar zW, a cota do ponto W, ou seja a altura da pirâmide:
+
+V[OPQRW] = 1/3 × A[OPQR] × zW ⇔ 75 = 25/3 * zW ⇔ (75 * 3)/25 = zW ⇔ zW = 9
+
+Assim, como a aresta da base tem comprimento 5, o ponto W é o centro da base superior, ou seja a abcissa e a ordenada medem metade da aresta, as suas coordenadas são:
+
+W (5/2, 5/2, 9)";;Teste Intermédio 10º ano - 05.05.2010;
+10;10;Geometria;Pontos, retas e planos;"Na figura ao lado, está representada, num referencial o.n. xOy, a reta r, que intersecta o eixo Ox no ponto de abcissa 2 e o eixo Oy no ponto de ordenada 2.
+
+Qual é a equação reduzida da reta r?";q_10;true;y = 2x + 2;y = -2x + 2;y = -x + 2;y = x + 2;y = -x + 2;"Como a reta r que interseta o eixo Oy no ponto de ordenada 2, ou seja no ponto de coordenadas B(0,2) a respetiva ordenada na origem é 2.
+
+Como interseta o eixo Ox no ponto de abcissa 2, ou seja, como também contém o ponto de coordenadas A(2,0), o declive é dado por:
+
+mr = (y𝐵-y𝐴)/(x𝐵 −x𝐴) = (2−0)/(0 −2) = 2/(−2) = -1
+
+Assim, a equação reduzida da reta r é: y = −x + 2";;Teste Intermédio 10º ano - 29.01.2010;
+11;10;Geometria;Pontos, retas e planos;"Na figura ao lado, estão representados, num referencial o.n. Oxyz, a pirâmide quadrangular regular [VOPQR] e o prisma quadrangular regular [ABCDEFGH]
+
+Sabe-se que:
+• os vértices P e R da pirâmide pertencem aos eixos coordenados Ox e Oy, respetivamente;
+• uma das bases do prisma está contida na base da pirâmide e cada vértice da outra base pertence a uma aresta da pirâmide.
+
+Preencha cada um dos espaços seguintes, de modo a obter afirmações verdadeiras quanto à posição relativa das retas e/ou dos planos.
+
+Copie as afirmações obtidas para a sua folha de respostas.
+
+As retas DQ e VF são .........................
+As retas EH e ......... são não complanares.
+A reta PQ e o plano HGB são ......................
+A reta FQ e o plano ADH são ......................
+Os planos BQV e  ........... são perpendiculares.
+";q_11;false;;;;;"As retas DQ e V F são concorrentes
+As retas EH e AB são não complanares.
+A reta PQ e o plano HGB são paralelos
+A reta FQ e o plano ADH são concorrentes
+Os planos BQV e PQR são perpendiculares.";;;Teste Intermédio 10º ano - 29.01.2010;

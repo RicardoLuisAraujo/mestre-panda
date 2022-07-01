@@ -8,6 +8,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Cleaning database..."
 Exercise.destroy_all
+# User.destroy_all
 # Answer.destroy_all
 # UserAnswer.destroy_all
 
@@ -17,48 +18,66 @@ Exercise.destroy_all
 #     { category: "Limites", number: 3, statement: 'Número Divido por zero tende para o quê?'},
 # ])
 
-exercise = Exercise.create([
-    { 
-        category: "Geometria",
-        sub_category: "Pontos, retas e planos",
-        year: 10,
-        statement: "Na figura ao lado, está representada, num referencial o.n. xOy, a reta AB.
+# Learn how to set the exercise_id for the list of answers
+file = File.join(Rails.root, 'db', 'exercises.json')
+exercise_list = JSON.parse(File.read(file))
+file = File.join(Rails.root, 'db', 'answers.json')
+answer_list = JSON.parse(File.read(file))
 
-        Sabe-se que:
-        • o ponto A pertence ao semieixo negativo Ox e o ponto B pertence ao semieixo positivo Oy
-        • a reta AB tem equação y=2x+4
-        Seja M o ponto médio do segmento de reta [AB].
-        
-        Quais são as coordenadas do ponto M ?",
-        image: "image_pergunta_1.png",
-        multiple_choice: true, 
-        resolution: "Como o ponto B pertence ao semieixo positivo Oy e à reta de equação y = 2x + 4, as suas coordenadas são (0,4)
+exercise_list.each do |exercise|
+  puts exercise.to_h.keys
+  Exercise.create(exercise.to_h)
+end
 
-        Como o ponto A pertence ao semieixo negativo Ox, tem ordenada nula, pelo que a sua abcissa é: 0 = 2x + 4 ⇔ −4 = 2x ⇔ −42 = x ⇔ −2 = x
+
+answer_list.each do |answer|
+  puts answer.to_h.keys
+  Answer.create(answer.to_h)
+end
+
+
+# exercise = Exercise.create([
+#     { 
+#         category: "Geometria",
+#         sub_category: "Pontos, retas e planos",
+#         year: 10,
+#         statement: "Na figura ao lado, está representada, num referencial o.n. xOy, a reta AB.
+
+#         Sabe-se que:
+#         • o ponto A pertence ao semieixo negativo Ox e o ponto B pertence ao semieixo positivo Oy
+#         • a reta AB tem equação y=2x+4
+#         Seja M o ponto médio do segmento de reta [AB].
         
-        Assim, as coordenadas do ponto médio, M, do segmento de reta [AB], são: 
-        ((𝑥𝐴+𝑥𝐵)/2  ,  (𝑦𝐴+𝑦𝐵)/2)= ((−2+0)/2,  (0+4)/2) = (-1,2)",
-        image_resolution: "NO",
-        source: "Exame - 2019, 2ª fase", 
-        answers_attributes: [
-            { 
-                answer: '(-1/2, 2)',
-                true_answer: false,
-            }, 
-            { 
-                answer: '(-1,2)',
-                true_answer: true,
-            }, 
-            { 
-                answer: '(-1/4, 1/2)',
-                true_answer: false,
-            }, 
-            { 
-                answer: '(-2,4)',
-                true_answer: false,
-            }, 
-        ]
-    }
+#         Quais são as coordenadas do ponto M ?",
+#         image: "image_pergunta_1.png",
+#         multiple_choice: true, 
+#         resolution: "Como o ponto B pertence ao semieixo positivo Oy e à reta de equação y = 2x + 4, as suas coordenadas são (0,4)
+
+#         Como o ponto A pertence ao semieixo negativo Ox, tem ordenada nula, pelo que a sua abcissa é: 0 = 2x + 4 ⇔ −4 = 2x ⇔ −42 = x ⇔ −2 = x
+        
+#         Assim, as coordenadas do ponto médio, M, do segmento de reta [AB], são: 
+#         ((𝑥𝐴+𝑥𝐵)/2  ,  (𝑦𝐴+𝑦𝐵)/2)= ((−2+0)/2,  (0+4)/2) = (-1,2)",
+#         image_resolution: "NO",
+#         source: "Exame - 2019, 2ª fase", 
+#         answers_attributes: [
+#             { 
+#                 answer: '(-1/2, 2)',
+#                 true_answer: false,
+#             }, 
+#             { 
+#                 answer: '(-1,2)',
+#                 true_answer: true,
+#             }, 
+#             { 
+#                 answer: '(-1/4, 1/2)',
+#                 true_answer: false,
+#             }, 
+#             { 
+#                 answer: '(-2,4)',
+#                 true_answer: false,
+#             }, 
+#         ]
+    # }
     # { 
     #     category: "Trignometria", 
     #     number: 2, 
@@ -105,6 +124,6 @@ exercise = Exercise.create([
     #     },
     # ]
     # },
-])
+# ])
 
 puts "Finished!"
