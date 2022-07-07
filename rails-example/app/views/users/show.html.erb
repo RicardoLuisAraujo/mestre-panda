@@ -160,7 +160,11 @@
       <tr>
         <td><%=link_to user_answer.exercise.id, new_exercise_user_answer_path(user_answer.exercise)%></td>
         <td>
-          <%=link_to image_tag(user_answer.exercise.image,  class: "mx-auto exercise-image", width: "100", height: "100"), new_exercise_user_answer_path(user_answer.exercise)%>
+          <%if user_answer.exercise.image%>
+            <%=link_to image_tag(user_answer.exercise.image,  class: "mx-auto exercise-image", width: "100", height: "100"), new_exercise_user_answer_path(user_answer.exercise)%>
+          <%else%>
+            None
+          <%end%>
         </td>
         
         <td><%=link_to user_answer.exercise.category, new_exercise_user_answer_path(user_answer.exercise)%></td>

@@ -8,15 +8,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Cleaning database..."
 Exercise.destroy_all
-# User.destroy_all
-# Answer.destroy_all
-# UserAnswer.destroy_all
-
-# exercise = Exercise.create([
-#     { category: "Geometria", number: 1, statement: '1+1?'},
-#     { category: "Trignometria", number: 2, statement: 'Angulo Reto tem quantos graus?'}, 
-#     { category: "Limites", number: 3, statement: 'Número Divido por zero tende para o quê?'},
-# ])
 
 # Learn how to set the exercise_id for the list of answers
 file = File.join(Rails.root, 'db', 'exercises.json')
@@ -25,15 +16,22 @@ file = File.join(Rails.root, 'db', 'answers.json')
 answer_list = JSON.parse(File.read(file))
 
 exercise_list.each do |exercise|
-  puts exercise.to_h.keys
-  Exercise.create(exercise.to_h)
+  exercise = Exercise.create(exercise.to_h)
+
+  answer_list.each do |answer|
+    if answer['exercise_number'] == exercise['exercise_number']
+      puts answer['exercise_number']
+      exercise.answers.create(answer.to_h)
+    end
+  end
+
 end
 
 
-answer_list.each do |answer|
-  puts answer.to_h.keys
-  Answer.create(answer.to_h)
-end
+# answer_list.each do |answer|
+#   puts answer.to_h.keys
+#   Answer.create(answer.to_h)
+# end
 
 
 # exercise = Exercise.create([

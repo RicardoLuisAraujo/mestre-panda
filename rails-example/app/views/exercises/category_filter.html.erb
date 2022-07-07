@@ -1,7 +1,7 @@
 <div class="container">
     <ul>
         <% @exercises.each do |exercise| %>
-            <li><%=link_to exercise.category, new_exercise_user_answer_path(exercise) %></li>
+            <li><%=link_to "Exercício nº #{exercise.exercise_number} - #{exercise.category}", new_exercise_user_answer_path(exercise) %></li>
         <%end%>
     </ul>
 </div>

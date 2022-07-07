@@ -4,6 +4,8 @@ class ExercisesController < ApplicationController
 
     def index
       @exercises = Exercise.all
+
+      @categories = @exercises.map { |exercise| exercise['category'] }.uniq
     end
 
     def show

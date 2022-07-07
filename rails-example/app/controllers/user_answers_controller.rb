@@ -15,7 +15,14 @@ class UserAnswersController < ApplicationController
         # we need `restaurant_id` to associate user_answer with corresponding exercise
         @exercise = Exercise.find(params[:exercise_id])
         @user_answer.exercise = @exercise
-        @user_answer.answer = @exercise.answers.find(params[:user_answer][:answer])
+        
+        if @exercise.multiple_choice?
+            @user_answer.answer = @exercise.answers.find(params[:user_answer][:answer])
+        else
+            @user_answer.answer = Answer.new(answer: params[:user_answer][:answer], exercise_number: @exercise.exercise_number, exercise_id: @exercise.id)
+        end
+        # @user_answer.answer = params[:user_answer][:answer]
+
         @user_answer.user_id = current_user.id
         @user_answer.save
         redirect_to new_exercise_user_answer_path(@exercise)

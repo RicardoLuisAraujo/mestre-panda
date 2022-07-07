@@ -20,15 +20,15 @@
 <br>
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-            <% @exercises.each do |exercise| %> 
+            <% @categories.each do |category| %> 
                 <div class="col">
-                    <%= link_to category_filter_exercises_path(:category => exercise.category), class: "card_link" do%>
+                    <%= link_to category_filter_exercises_path(:category => category), class: "card_link" do%>
                         <div class="card">
                             <img src="https://i0.wp.com/www.vozprof.com/wp-content/uploads/2020/12/matematica.jpg?fit=930%2C450&ssl=1" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">Lista de exercícios de <%=exercise.category%>. Clica aqui para ires para os exercícios!</p>
+                                <p class="card-text">Lista de exercícios de <%=category%>. Clica aqui para ires para os exercícios!</p>
 
-                                <button class='btn btn-outline-info my-2 my-sm-0 w-100'><%=exercise.category%></button>
+                                <button class='btn btn-outline-info my-2 my-sm-0 w-100'><%=category%></button>
                             </div>
                         </div>
                     <% end %>

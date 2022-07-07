@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_26_180025) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_06_152213) do
   create_table "answers", force: :cascade do |t|
     t.text "answer"
     t.boolean "true_answer"
     t.integer "exercise_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "exercise_number"
     t.index ["exercise_id"], name: "index_answers_on_exercise_id"
   end
 
@@ -32,6 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_26_180025) do
     t.string "resolution"
     t.string "image_resolution"
     t.string "source"
+    t.integer "exercise_number"
   end
 
   create_table "profiles", force: :cascade do |t|
