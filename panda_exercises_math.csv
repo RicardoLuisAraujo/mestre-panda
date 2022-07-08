@@ -6,7 +6,7 @@ Sabe-se que:
 • a reta AB tem equação y=2x+4
 Seja M o ponto médio do segmento de reta [AB].
 
-Quais são as coordenadas do ponto M ?";q_1;true;(-1/2, 2);(-1, 2);(-1/4, 1/2);(-2, 4);(-1,2);"Como o ponto B pertence ao semieixo positivo Oy e à reta de equação y = 2x + 4, as suas coordenadas são (0,4)
+Quais são as coordenadas do ponto M ?";q_1;true;(-1/2, 2);(-1, 2);(-1/4, 1/2);(-2, 4);(-1, 2);"Como o ponto B pertence ao semieixo positivo Oy e à reta de equação y = 2x + 4, as suas coordenadas são (0,4)
 
 Como o ponto A pertence ao semieixo negativo Ox, tem ordenada nula, pelo que a sua abcissa é: 0 = 2x + 4 ⇔ −4 = 2x ⇔ −42 = x ⇔ −2 = x
 
@@ -20,7 +20,7 @@ Sabe-se que:
 • o ponto C é o centro da base superior do cilindro.
 
 Determine a área da secção produxida no cilindro pelo plano de equação x = 1.
-";q_2;false;;;;;6;"Como os pontos A, B e C têm abcissa 1, todos pertencem ao plano de equação x = 1. Assim a seçcão produzida no cilindro pelo plano de equação x = 1, é o retângulo que contem estes pontos, ou seja o retângulo cujos lados são o diâmetro da base (2) e a altura (3) do cilindro, pelo que a sua área é: 
+";q_2;false;6;;;;6;"Como os pontos A, B e C têm abcissa 1, todos pertencem ao plano de equação x = 1. Assim a seçcão produzida no cilindro pelo plano de equação x = 1, é o retângulo que contem estes pontos, ou seja o retângulo cujos lados são o diâmetro da base (2) e a altura (3) do cilindro, pelo que a sua área é: 
 
 A = 2 * 3 = 6";q_2_r;Exame - 2017, Época especial;
 3;10;Geometria;Pontos, retas e planos;"Considere, num referencial o.n. xOy, os pontos A(−1,3) e B(2,4). 
@@ -33,7 +33,7 @@ Como retas paralelas têm o mesmo declive, de entre as opções apresentadas a �
 Os pontos, P, R e T pertencem aos semieixos positivos. 
 Numa das opcções seguintes estão as coordenadas de um ponto pertencente a uma das arestas do cubo.
 Em qual?
-";q_4;true;(1, 1, 2);(1, 2, 0);(0, 1, 1);(1, 1, 1);(1,2,0);"Representando os quatro pontos, podemos verificar que: 
+";q_4;true;(1, 1, 2);(1, 2, 0);(0, 1, 1);(1, 1, 1);(1, 2, 0);"Representando os quatro pontos, podemos verificar que: 
 • o ponto A(1,1,2) pertence à face [STUV], mas não a qualquer uma das arestas
 • o ponto B(1,2,0) pertence à aresta [QR] 
 • o ponto C(1,1,0) pertence à face [OPQR], mas não a qualquer uma das arestas
@@ -42,7 +42,7 @@ Em qual?
 • a reta r, definida pela equação y = 2x − 1 
 • o ponto A de coordenadas (0, − 2) 
 
-Escreva a equação reduzida da reta paralela à reta r que passa no ponto A ";q_5;false;;;;;y = 2x -2;"Como a reta deve ser paralela à reta r deve ter o mesmo declive, ou seja, mr = 2. Como deve conter o ponto A (cuja abcissa é nula) então a ordenada na origem é igual à ordenada do ponto A.
+Escreva a equação reduzida da reta paralela à reta r que passa no ponto A ";q_5;false;y = 2x -2;;;;y = 2x -2;"Como a reta deve ser paralela à reta r deve ter o mesmo declive, ou seja, mr = 2. Como deve conter o ponto A (cuja abcissa é nula) então a ordenada na origem é igual à ordenada do ponto A.
 
 Assim a equação reduzida, da reta paralela à reta r que passa no ponto A, é:
 
@@ -52,7 +52,7 @@ y= mrx + yA ⇔ y= 2x−2
 
 As coordenadas dos pontos A, B e G são (11, − 1,2), (8,5,0) e (6,9,15), respectivamente.
 
-Escreva uma condição que defina a reta que passa no ponto G e que é  paralela ao eixo Oy.";q_6;false;;;;;x = 6 ∧ z = 15;"Como a reta deve ser paralela ao eixo Oy pode ser definida pela interseção de dois planos, perpendiculares aos eixos Ox e Oz, respetivamente.
+Escreva uma condição que defina a reta que passa no ponto G e que é  paralela ao eixo Oy.";q_6;false;x = 6 ∧ z = 15;;;;x = 6 ∧ z = 15;"Como a reta deve ser paralela ao eixo Oy pode ser definida pela interseção de dois planos, perpendiculares aos eixos Ox e Oz, respetivamente.
 
 Como a reta deve conter o ponto G(6,9,15), o plano perpendicular ao eixo Ox é o plano de equação x = 6 e o plano perpendicular ao eixo das cotas é o plano definido por z = 15
 
@@ -66,9 +66,10 @@ Sabe-se que:
 • o ponto P pertence ao eixo Ox
 • o ponto U tem coordenadas (4, −4, −4)
 
-Escreva uma condição cartesiana que defina o plano perpendicular à reta QN e que passa no ponto V";q_7;false;;;;;;"Como a reta QN é paralela ao eixo Ox, e como se pretende que o plano seja perpendicular à reta QN também será perpendicular ao eixo Ox, ou seja, é definido por uma equação do tipo x = k, k ∈ R
+Escreva uma condição cartesiana que defina o plano perpendicular à reta QN e que passa no ponto V";q_7;false;x = 2;;;;x = 2;"Como a reta QN é paralela ao eixo Ox, e como se pretende que o plano seja perpendicular à reta QN também será perpendicular ao eixo Ox, ou seja, é definido por uma equação do tipo x = k, k ∈ R
 
 Como se pretende que o plano contenha o ponto V, então o valor de k é a abcissa do ponto V, (k = xV).
+
 A abcissa do ponto V é metade da abcissa do ponto Q, ou do ponto U, então temos que a equação do plano perpendicular à reta QN e que passa no ponto V é:
 
 x = xU/2 ⇔ x = 4/2 ⇔ x = 2";;Teste Intermédio 11º ano - 27.01.2011;
@@ -89,7 +90,7 @@ O ponto W, vértice da pirâmide, coincide com o centro da base superior, [STUV]
 O ponto P tem coordenadas (5,0,0).
 
 Sabe-se que o volume da pirâmide é igual a 75
-Determine as coordenadas do ponto W, vértice da pirâmide.";q_9;false;;;;;(5/2, 5/2, 9);"Como a base da pirâmide, [OPQR], é um quadrado e o ponto P tem coordenadas (5,0,0) e o ponto o ponto O tem coordenadas (0,0,0), temos que 𝑂𝑃 ̅= 5, e a área da base é: 
+Determine as coordenadas do ponto W, vértice da pirâmide.";q_9;false;(5/2, 5/2, 9);;;;(5/2, 5/2, 9);"Como a base da pirâmide, [OPQR], é um quadrado e o ponto P tem coordenadas (5,0,0) e o ponto o ponto O tem coordenadas (0,0,0), temos que 𝑂𝑃 ̅= 5, e a área da base é: 
 
 A[OPQR] = 𝑂𝑃 ̅2 = 52 = 25
 
@@ -124,8 +125,196 @@ As retas EH e ......... são não complanares.
 A reta PQ e o plano HGB são ......................
 A reta FQ e o plano ADH são ......................
 Os planos BQV e  ........... são perpendiculares.
-";q_11;false;;;;;"As retas DQ e V F são concorrentes
+";q_11;false;"As retas DQ e V F são concorrentes
+As retas EH e AB são não complanares.
+A reta PQ e o plano HGB são paralelos
+A reta FQ e o plano ADH são concorrentes
+Os planos BQV e PQR são perpendiculares.";;;;"As retas DQ e V F são concorrentes
 As retas EH e AB são não complanares.
 A reta PQ e o plano HGB são paralelos
 A reta FQ e o plano ADH são concorrentes
 Os planos BQV e PQR são perpendiculares.";;;Teste Intermédio 10º ano - 29.01.2010;
+12;10;Geometria;Pontos, retas e planos;"Na figura ao lado está representado, em referencial o.n. Oxyz, o prisma triangular não regular [ABCDEF]
+
+Sabe-se que:
+• as bases são triângulos isósceles ((AB) ̅ = (AC) ̅  e (DE) ̅ = (DF) ̅)
+• a base [ABC] está contida no plano xOy
+• as arestas laterais do prisma são perpendiculares às bases
+• o ponto A tem coordenadas (4,0,0)
+• o ponto E tem coordenadas (0,3,8)
+• o ponto F é o simétrico do ponto E, relativamente ao plano xOz
+
+Determine a área lateral do prisma.";q_12;false;128;;;;128;"
+As faces laterais do prisma são retângulos. Temos que (BE) ̅ = zE = 8 e a distância entre os pontos D (4,0,8) e E (0,3,8), é dada por: 
+
+(DE) ̅= √((4-0)^(2 )+ 〖(0-3)〗^2+〖(8-8)〗^2 ) = √(4^(2 )+ 〖(-3)〗^2+0^2 )= √(16+9+0) = √25 = 5 
+
+Como os pontos E e F são simétricos relativamente ao plano xOz, temos que (EF) ̅= 2 × yE = 2 × 3 = 6.
+
+Assim, como as bases do prisma são triângulos isósceles, as áreas das faces [ABED] e [ACFD] são iguais e a área lateral do prisma, é: 
+
+ALateral = 2 × A[ABED] + A[ACFD] = 2 × 5 × 8 + 6 × 8 = 80 + 48 = 128";;Teste Intermédio 10º ano - 06.05.2009;
+13;10;Geometria;Pontos, retas e planos;"Na figura seguinte está representado, em referencial o.n. Oxyz, um cone de revolução.
+Sabe-se que:
+• o vértice V do cone tem coordenadas (1,2,6)
+• o ponto C é o centro da base do cone
+Seja W o ponto simétrico do ponto V, em relação ao plano xOy.
+Indique as coordenadas do ponto W e escreva uma condição que defina o segmento de reta [VW]";q_13;false;"W(1,2, − 6)
+x = 1 ∧ y = 2 ∧ −6 ≤ z ≤ 6";;;;"W(1,2, − 6)
+x = 1 ∧ y = 2 ∧ −6 ≤ z ≤ 6";"Verificando que o ponto simétrico do ponto V, em relação ao plano xOy tem a mesma abcissa, a mesma ordenada e cota simétrica, temos que as coordenadas do ponto W são:
+
+W(xV ,yV , − zV ) = W(1,2, − 6)
+
+Podemos ainda observar que a reta VW é paralela ao eixo Oz, ou seja a interseção de dois planos perpendiculares aos eixos Ox e Oy, ambos contendo o ponto V, ou seja, a reta VW pode ser definida por:
+
+x = 1 ∧ y = 2
+
+Para definir o segmento de reta [WV], é necessário garantir que as cotas dos pontos estão compreendidos entre −6 e 6, ou seja, o segmento de reta [WV] é definido por:
+x = 1 ∧ y = 2 ∧ −6 ≤ z ≤ 6";q_13_r;Teste Intermédio 11º ano - 29.01.2009;
+14;10;Geometria;Pontos, retas e planos;"Na figura está representado, em referencial o.n. Oxyz, um sólido que pode ser decomposto num cubo e numa pirâmide quadrangular regular.
+
+A origem do referencial é um dos vértices do cubo, o vértice P pertence ao eixo Ox e o vértice R pertence ao eixo Oy.
+
+Os vértices da base da pirâmide são os pontos médios dos lados do quadrado [OPQR].
+O ponto Q tem coordenadas (2,2,0).
+
+O volume do sólido é igual a 10
+
+Determine a cota do ponto E.";q_14;false;3;;;;3;"Como o ponto Q tem coordenadas (2,2,0) e o cubo tem dois vértices sobre os eixos, temos que a aresta do cubo tem medida 2, e volume é:
+
+VC = 23 = 8 
+
+Assim, o volume da pirâmide pode ser calculado pela diferença entre o volume do sólido (VS) e o volume do cubo (VC):
+
+VP = VS − VC = 10 − 8 = 2 
+
+Como os vértices da pirâmide são os pontos médios das arestas do cubo, podemos determinar o comprimento da aresta da base da pirâmide:
+
+(AB) ̅2 = (AP) ̅2 + (BP) ̅2 ⇔ (AB) ̅2 = 12 + 12 ⇔ (AB) ̅2 = 2 
+⇒ (AB) ̅>0 
+(AB) ̅ = √2
+
+Assim, a área da base da pirâmide é A[ABCD] = 〖(√2)〗^2 = 2, e recorrendo ao valor do volume, podemos calcular a altura da pirâmide, ou seja, a cota do ponto E: 
+
+VP = 1/3 × A[ABCD] × zE ⇔ 2 = (2 × zE)/3 ⇔ (2 × 3)/2 = zE ⇔ zE = 3
+";;Teste Intermédio 10º ano - 28.01.2009;
+15;10;Geometria;Pontos, retas e planos;"Considere, em referencial o.n. xOy, a reta r que interseta o eixo Ox no ponto de abcissa 2 e que interseta o eixo Oy no ponto de ordenada 6.
+Qual é a equação reduzida da reta r ?";;true;y = -3x + 6;y = 3x + 6;y = -2x + 3;y = 2x + 3;y = -3x + 6;"Como a reta r interseta o eixo Oy no ponto de ordena 6, podemos concluir que a ordenada na origem é 6, ou seja, a equação da reta é da forma y = ax + 6, a ∈ R \ {0} 
+
+Como a reta r interseta o eixo Ox no ponto de abcissa 2 e o eixo Oy no ponto de ordenada 6, podemos esboçar a representação da reta num referencial (como na figura ao lado) e concluir que o declive da reta é negativo (a < 0). 
+
+Assim, de entre as opções apresentadas, a única que satisfaz cumulativamente as duas condições é y = −3x + 6";q_15_r;Teste Intermédio 10º ano - 28.05.2008;
+16;10;Geometria;Pontos, retas e planos;"Na figura está representado, em referencial o.n. Oxyz, um cubo [OPQRSTUV].
+
+A aresta [OP] está contida no semieixo positivo Ox, a aresta [OR] está contida no semieixo positivo Oy e a aresta [OS] está contida no semieixo positivo Oz. 
+
+O ponto U tem coordenadas (2,2,2) 
+
+Defina, por meio de uma condição, a aresta [UQ]
+";q_16;false;x = 2 ∧ y = 2 ∧ 0 ≤ z ≤ 2;;;;x = 2 ∧ y = 2 ∧ 0 ≤ z ≤ 2;"Como a reta QU é a interseção dos planos PQU e RQU, ou seja, dos planos x = 2 e y = 2, então que uma condição que define a reta [QU] é a parte desta reta que tem cotas compreendidas entre 0 e 2, ou seja: 
+
+x = 2 ∧ y = 2 ∧ 0 ≤ z ≤ 2";;Teste Intermédio 10º ano - 28.05.2008;
+17;10;Geometria;Pontos, retas e planos;"Na figura ao lado estão representadas, em referencial o.n. xOy, uma reta AB e uma circunferência com centro na origem e raio igual a 5.
+
+Os pontos A e B pertencem à circunferência. 
+O ponto A também pertence ao eixo das abcissas. 
+
+Admitindo que o declive da reta é igual 1/2, resolva as duas alíneas seguintes: 
+
+17.1. Mostre que uma equação da reta AB é x − 2y + 5 = 0 
+
+17.2. Mostre que o ponto B tem coordenadas (3,4)
+";q_17;false;;;;;;"17.1 
+
+Como o ponto A pertence ao eixo das abcissas tem ordenada nula (yA = 0), e como pertence à circunferência de raio 5, centrada na origem, dista 5 unidades da origem, pelo que a abcissa é −5, (xA = −5). 
+
+Assim, podemos calcular o valor da ordenada na origem (b) da reta AB, substituindo as coordenadas de um ponto da reta (ponto A) e o valor do declive (m  = ½) na forma geral da equação reduzida (y = mx + b):
+
+ yA = m × xA + b ⇔ 0 = 1/2 × (−5) + b ⇔ 0 = − 5/2 + b ⇔ 5/2 = b 
+
+E assim, uma equação da reta AB é:
+
+ y = 1/2x + 5/2 ⇔ 2y = x + 5 ⇔ 0 = x − 2y + 5 ⇔ x − 2y + 5 = 0
+
+17.2 
+
+Como o ponto B pertence simultaneamente à reta AB e à circunferência, as coordenadas do ponto B devem verificar as duas equações - a da reta AB (x − 2y + 5 = 0) e a da circunferência de raio 5 e centro na origem (x^2 + y^2 = 5^2) 
+
+Assim, substituindo as coordenadas (3,4) nas duas equações anteriores, temos que: 
+
+• (3) − 2(4) + 5 = 0 ⇔ 3 − 8 − 5 = 0 ⇔ 0 = 0 (Proposição verdadeira) 
+• 3^2+ 4^2 = 5^2 ⇔ 9 + 16 = 25 ⇔ 25 = 25 (Proposição verdadeira).
+
+Assim, podemos concluir que o ponto B tem coordenadas (3,4), porque, para além das coordenadas do ponto A, estas são as coordenadas do outro ponto que pertence simultaneamente à reta AB e à circunferência descrita, ou seja são as coordenadas do ponto B
+";;Teste Intermédio 11º ano - 24.01.2008;
+18;10;Geometria;Pontos, retas e planos;"Na figura ao lado estão representados, em referencial o. n. Oxyz, um prisma e uma pirâmide quadrangulares regulares, com a mesma altura.
+
+A base do prisma, que coincide com a base da pirâmide, está contida no plano xOy.
+
+O vértice P pertence ao eixo Ox. 
+O vértice R pertence ao eixo Oy. 
+O vértice S pertence ao eixo Oz. 
+O vértice U tem coordenadas (2,2,4).
+
+ Escreva uma condição que define a reta TU
+";q_18;false; x = 2 ∧ z = 4;;;; x = 2 ∧ z = 4;"Como a reta TU é a interseção dos planos PTU e STU ou seja, dos planos x = 2 e z = 4, então que uma condição que define a reta TU é:
+
+ x = 2 ∧ z = 4";q_18_r;Exame – 2001, Epoca especial (c´od. 135);
+19;10;Geometria;Pontos, retas e planos;"Considere, num referencial o.n.Oxyz, uma reta r, perpendicular ao plano yOz.
+
+Qual das afirmações seguintes é necessariamente verdadeira?";;true;A reta r é perpendicular ao plano xOy ;A reta r está contida no plano xOy ;A reta r é perpendicular ao eixo Ox ;A reta r é paralela ao eixo Ox;A reta r é paralela ao eixo Ox;"Analisando as alternativas apresentadas, verificamos que: 
+
+• A opção (A) é falsa porque a reta r é paralela ao plano xOy; 
+• A opção (B) não é necessariamente verdadeira porque a reta r pode ser um conjunto de pontos com cota não nula; 
+• A opção (C) é falsa porque a reta r é paralela ao eixo Ox; 
+Relativamente à opção (D),como a reta r é perpendicular ao plano yOz também é perpendicular a todas as retas contidas no plano yOz, em particular aos eixos Oy e Oz, e assim, é paralela ao eixo Ox (como se pretende ilustrar na figura anterior).";q_19_r;"Exame – 2000, Prova 2 para Militares (c´od. 135)
+Exame – 2000, Prova de reserva (c´od. 135)";
+20;10;Geometria;Pontos, retas e planos;"Na figura ao lado está representada, em referencial o.n. Oxyz, uma pirâmide quadrangular regular.
+
+• A base da pirâmide é paralela ao plano xOy
+• O ponto A tem coordenadas (8,8,7)
+• O ponto B pertence ao plano yOz
+• O ponto C pertence ao eixo Oz
+• O ponto D pertence ao plano xOz
+• O ponto E é o centro da base da pirâmide
+• O vértice V da pirâmide pertence ao plano xOy
+
+Determine o perímetro de uma face lateral da pirâmide.";q_20;false;26;;;;26;"Como o ponto A tem coordenadas (8,8,7), o ponto D pertence ao plano xOz e que a base da pirâmide é paralela ao plano xOy, então as coordenadas do ponto D são (8,0,7) e o lado da base da pirâmide é: 
+
+(DA) ̅= √((8-8)^(2 )+ (0-8)^2+(7-7)^2 ) = √(0 + 8^2+0) = 8
+
+Como a o vértice V da pirâmide pertence ao plano xOy tem cota nula como a pirâmide é regular as restantes coordenadas são metade das coordenadas respetivas do ponto A, ou seja as coordenadas do vértice V são ((4,4,0)).
+
+
+Como a pirâmide é regular, as arestas laterais têm o mesmo comprimento ((DV) ̅ = (AV) ̅), e calculado o valor do comprimento, temos:
+
+(DV) ̅= √((8-4)^(2 )+ (0-4)^2+(7-0)^2 ) = √(4^2  + 4^2+7^2 ) = √(16 + 16+48) = √(81 ) = 9
+
+Desta forma o perímetro de uma face lateral da pirâmide é: P[DAV] = (DA) ̅  +  (DV) ̅ + (AV) ̅  = (DA) ̅ + 2(DV) ̅  = 8 + 2 × 9 = 8 + 18 = 26";q_20_r;"Exame – 2000, Epoca Especial (setembro) (c´od. 135)
+Exame – 1999, Prova de reserva (c´od. 135)";
+21;10;Geometria;Pontos, retas e planos;"Na figura ao lado está representada, em referencial o.n. Oxyz, um prisma triangular regular. Sabe-se que: 
+
+• O vértice O coincide com a origem do referencial
+• O vértice P pertence ao semieixo positivo Ox
+• O vértice R pertence ao semieixo positivo Oy
+• O segmento [QR] tem comprimento 6
+
+Sabendo que a área lateral do prisma é 72, determine as coordenadas do ponto S";q_21;false;(6, 2, √(12 ));;;;(6, 2, √(12 ));"Sabendo que a área lateral do prisma é 72, e que a área lateral é a soma das áreas de três retângulos, temos que a área de cada retângulo, em particular do retângulo [QRST] é:
+
+A[QRST] = 72/3 = 24 
+
+Como o segmento [QR] tem comprimento 6, podemos determinar o comprimento do segmento [QS]: 
+
+A[QRST] = (QR) ̅  × (QS) ̅  ⇔ 24 = 6(QS) ̅  ⇔ 24/6 = (QS) ̅ ⇔ (QS) ̅= 4 
+
+Como o prisma é regular, as bases são polígonos regulares, ou seja, o triângulo [PQS] é equilátero ((QP) ̅= (QS) ̅= 4), e por isso considerando M o ponto médio do lado [PQ], temos que 
+
+	(QM) ̅ = (QP) ̅/2 = 4/2 = 2
+
+Desta forma, recorrendo ao teorema de Pitágoras, podemos calcular a cota do ponto S: 
+
+〖(QS) ̅  〗^2 = 〖(QM) ̅  〗^2 + 〖(MS) ̅  〗^2 ⇔ 4^2= 2^2  + 〖(MS) ̅  〗^2⇔ 16 − 4 =  〖(MS) ̅  〗^2 ⇒ MS>0   (MS) ̅ = √(12 )
+
+E assim, verificando que o ponto S tem a mesma abcissa que o ponto P, a mesma ordenada que o ponto M e a cota calculada, temos que as coordenadas do ponto S são (6, 2, √(12 ))
+
+";q_21_r;Exame – 2000, 1.a fase - 2.a chamada (c´od. 135;

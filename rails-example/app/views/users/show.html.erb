@@ -169,7 +169,10 @@
         
         <td><%=link_to user_answer.exercise.category, new_exercise_user_answer_path(user_answer.exercise)%></td>
         <td><%=link_to user_answer.exercise.statement, new_exercise_user_answer_path(user_answer.exercise)%></td>
-        <td><%=@user.user_answers.find_all{|user_answer| user_answer.answer.true_answer== false && user_answer.exercise_id == user_answer.exercise.id}.count%></td>
+        <td><%=user_answer.user.user_answers.find_all{
+          |answer_user| (answer_user.answer.true_answer== false) && 
+          (answer_user.exercise_id == user_answer.exercise.id)
+          }.count%></td>
 
         <% if user_answer.answer_id == user_answer.exercise.answers.select { |answer| answer.true_answer == true }[0].id%>
           <td>✅</td>
