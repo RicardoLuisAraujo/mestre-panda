@@ -6,7 +6,6 @@ class UserAnswersController < ApplicationController
         @exercise = Exercise.find(params[:exercise_id])
         @answers = Exercise.find(params[:exercise_id]).answers
         @user_answer = UserAnswer.new(exercise_id: @exercise.id)
-        # @user_answer.answers = @answers
       end
     
 
@@ -21,11 +20,19 @@ class UserAnswersController < ApplicationController
         else
             @user_answer.answer = Answer.new(answer: params[:user_answer][:answer], exercise_number: @exercise.exercise_number, exercise_id: @exercise.id)
         end
-        # @user_answer.answer = params[:user_answer][:answer]
 
         @user_answer.user_id = current_user.id
         @user_answer.save
-        redirect_to new_exercise_user_answer_path(@exercise)
+        #render :partial => 'subject', :object => @subject
+
+        
+        @user_answer.save
+        
+        
+        # respond_to do |format|
+        #     format.html # index.html.erb
+        #     format.json { render json: @user_answer }
+        #   end          
     end
 
     private

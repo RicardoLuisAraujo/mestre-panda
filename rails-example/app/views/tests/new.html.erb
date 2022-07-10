@@ -1,0 +1,27 @@
+<% @failed_exercises.each do |exercise| %>
+
+<div class="container exercise-page">
+  <h2 class="exercise-title">Exercício <%= exercise.id %> de <%= exercise.category %> - <%= exercise.sub_category %></h2>
+
+  <div class="exercise-statement col-xs-12 col-sm-12 col-lg-8 mx-auto">
+    <div class="card">
+    <% if exercise.image %>
+      <%= image_tag exercise.image, class: "mx-auto image-centered", width: 300, height: 350%>
+      <p class="exercise-source text-center text-muted">Fonte: <%=exercise.source%></p>
+      <div class="card-body text-justify"> 
+        <%= simple_format exercise.statement %>
+      </div>
+    <% else %>
+      <div class="card-body text-justify"> 
+        <%= simple_format exercise.statement %>
+      </div>
+      <p class="exercise-source text-center text-muted">Fonte: <%=exercise.source%></p>
+    <% end %> 
+    </div>
+  </div>
+
+  <br>
+
+    <%= render 'test_form', :exercise => exercise%>
+
+<%end%>

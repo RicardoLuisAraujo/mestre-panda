@@ -8,6 +8,8 @@ import Chart from 'chart.js/auto';
 
 //= require 'chart.js'
 //= require bootstrap-sprockets
+//= require jquery
+//= require jquery_ujs
 
 document.addEventListener('turbolinks:load', () => {
     var ctx = document.getElementById('myChart').getContext('2d');

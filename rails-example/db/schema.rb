@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_06_152213) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_08_112438) do
   create_table "answers", force: :cascade do |t|
     t.text "answer"
     t.boolean "true_answer"
@@ -34,6 +34,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_152213) do
     t.string "image_resolution"
     t.string "source"
     t.integer "exercise_number"
+    t.integer "test_id"
+    t.index ["test_id"], name: "index_exercises_on_test_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -41,6 +43,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_152213) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_answers", force: :cascade do |t|
@@ -69,6 +76,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_152213) do
   end
 
   add_foreign_key "answers", "exercises"
+  add_foreign_key "exercises", "tests"
   add_foreign_key "profiles", "users"
   add_foreign_key "user_answers", "answers"
   add_foreign_key "user_answers", "exercises"

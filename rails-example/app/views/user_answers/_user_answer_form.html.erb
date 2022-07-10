@@ -1,6 +1,6 @@
 
 <%if @exercise.multiple_choice%>
-  <%= simple_form_for [@exercise, @answer, @user_answer], :html=> { class: 'col-xs-12 col-sm-12 col-lg-3 mx-auto text-center list-group' } do |f| %>
+  <%= simple_form_for [@exercise, @user_answer], remote: true, authenticity_token: true, :html=> { class: 'col-xs-12 col-sm-12 col-lg-3 mx-auto text-center list-group' } do |f| %>
       <%= f.simple_fields_for :answer, @answers do |answer_form| %>
         <%= f.input_field :answer, 
             label: 'Answer',
@@ -9,11 +9,11 @@
             :item_label_class => 'list-group-item',
             collection: @answers, label_method: :answer %>
             <br>
-        <%= f.submit 'Submit Answer!', class: "btn btn-outline-success " %>
+        <%= f.submit 'Submit Answer!', class: "btn btn-outline-success", id: "submit" %>
       <% end %>
   <% end %>
   <%else%>
-    <%= simple_form_for [@exercise, @answer, @user_answer], :html=> { class: 'col-xs-12 col-sm-12 col-lg-3 mx-auto text-center list-group' } do |f| %>
+    <%= simple_form_for [@exercise, @user_answer], :html=> { class: 'col-xs-12 col-sm-12 col-lg-3 mx-auto text-center list-group' } do |f| %>
       <%=f.input :answer, as: :text %>
       <%= f.submit 'Submit Answer!', class: "btn btn-outline-success " %>
     <% end %>

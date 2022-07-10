@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'tests/new'
   devise_for :users
   resources :users, :only => [:show]
 
@@ -8,10 +9,13 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "exercises#index"
 
-  resources :exercises do
+  resources :tests do
+    resources :exercises, only: [:index]
+  end
+  
+  resources :exercises, only: [:show, :edit, :update, :destroy, :new, :create]  do
     resources :answers 
     resources :user_answers #, only: [ :new, :create ]
-    
     
     
     collection do
@@ -19,28 +23,5 @@ Rails.application.routes.draw do
       get :exercise_user_answer_form
     end
 
-    # resources :answers, only: [ :index, :show ]
-    # resources :user_answers #, only: [ :new, :create ]
   end
 end
-
-
-# exercises 
-#   question_content
-#   Answers (many)
-#       answer_content
-#       true_answer? bool
-#     exercise_id
-#   User_answers (many)
-#     answer_id
-#     exercise_id
-
-
-# User_answers
-#   answer_id
-#   exercise_id
-
-# Answers
-#   exercise_id
-#   answer_content
-#   true_answer? bool
