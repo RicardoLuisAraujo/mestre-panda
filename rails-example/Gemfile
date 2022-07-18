@@ -31,7 +31,6 @@ gem 'bootstrap-sass'
 gem "chartkick"
 gem "groupdate"
 
-
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 

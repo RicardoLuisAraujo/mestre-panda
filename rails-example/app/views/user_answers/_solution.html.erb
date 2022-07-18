@@ -1,24 +1,19 @@
-<br>
-  <div id="resolution" style="display:none">
-      
-      <%if current_user.user_answers.last.answer.answer == @exercise.answers.select { |answer| answer.true_answer == true }[0].answer %>
+<%= turbo_frame_tag @user_answer do %>
+  <p>A tua resposta: <%=user_answer.answer.answer%></p>
+  <%if user_answer.answer.answer == user_answer.exercise.answers.select { |answer| answer.true_answer == true }[0].answer %>
+    <p>A tua resposta está correta!</p>
+  <%else%>
+    <p>A tua resposta está errada.</p>
+  <%end%>
 
-        <p>A tua resposta: <%=@exercise.user_answers.last.answer.answer%></p>
-        <p>A tua resposta está correta!</p>
-      <%else%>
-        <p>A tua resposta: <%=@exercise.user_answers.last.answer.answer%></p>
-        <p>A tua resposta está errada.</p>
-      <%end%>
-      <br>
-      <h3>Resolução do Exercício:</h3>
-      <br>
-      <div class="exercise-statement col-xs-9 col-sm-9 col-lg-6 mx-auto">    
-        <%= simple_format @exercise.resolution %>
-      </div>
-
-      <br>
-      <%= link_to "Go back to Home Page", exercises_path() %>
-      <br>
-      <!--<%#= link_to "Go to Next Exercise", new_exercise_user_answer(@exercise.next) %>-->
+  <br>
+  <h3>Resolução do Exercício:</h3>
+  <br>
+  <div class="user_answer.-statement col-xs-9 col-sm-9 col-lg-6 mx-auto">    
+    <%= simple_format user_answer.exercise.resolution %>
   </div>
-</div>
+
+  <br>
+  <%= link_to "Go back to Home Page", exercises_path() %>
+  <br>
+<%end%> 

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root to: "exercises#index"
 
   resources :tests do
-    resources :exercises, only: [:index]
+    resources :user_answers
   end
   
   resources :exercises, only: [:show, :edit, :update, :destroy, :new, :create]  do

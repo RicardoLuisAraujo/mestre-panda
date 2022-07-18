@@ -9,7 +9,8 @@ class ExercisesController < ApplicationController
     end
 
     def show
-      # @user_answer = UserAnswer.new(exercise_id: @exercise.id)
+      @user_answer = UserAnswer.new(exercise_id: @exercise.id)
+      @answers = @exercise.answers
       # redirect_to new_exercise_user_answer_path(@exercise)
       
     end
