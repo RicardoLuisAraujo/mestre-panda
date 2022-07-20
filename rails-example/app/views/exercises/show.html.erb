@@ -1,36 +1,18 @@
 <div class="container exercise-page">
-  <h2 class="exercise-title">Exercício <%= @exercise.id %> de <%= @exercise.category %> - <%= @exercise.sub_category %></h2>
+  <%# Title %>
+  <h2 class="exercise-title">
+    Exercício <%= @exercise.id %> de <%= @exercise.category %> - <%= @exercise.sub_category %>
+  </h2>
 
-  <div class="exercise-statement col-xs-12 col-sm-12 col-lg-8 mx-auto">
-    <div class="card">
-    <% if @exercise.image %>
-      <%= image_tag @exercise.image, class: "mx-auto image-centered", width: 300, height: 350%>
-      <p class="exercise-source text-center text-muted">Fonte: <%=@exercise.source%></p>
-      <div class="card-body text-justify"> 
-        <%= simple_format @exercise.statement %>
-      </div>
-    <% else %>
-      <div class="card-body text-justify"> 
-        <%= simple_format @exercise.statement %>
-      </div>
-      <p class="exercise-source text-center text-muted">Fonte: <%=@exercise.source%></p>
-    <% end %> 
-    </div>
-  </div>
+  <%# Problema, Imagem e Fonte %>
+  <%= render 'exercise', exercise: @exercise %>
 
   <br>
-
+    <%# UserAnswer Form %>
     <%= render 'user_answers/user_answer_form', user_answer: @user_answer %>
-
   <br>
 
-  <%= turbo_frame_tag @user_answer %>
-
+    <%# Resolução e Confirmação de certo ou errado%>
   <%= turbo_frame_tag "solution" %>
 
-<!--<%= turbo_frame_tag @user_answer do %>
-  <% if !@user_answer.answer.nil? %>
-    <%= render partial: "user_answers/solution",  user_answer: @user_answer %>
-  <% end %>
-    <p>Hi</p>
-<% end %> -->
+</div>

@@ -1,15 +1,11 @@
 class UserAnswersController < ApplicationController
     before_action :user_answer_params
-    respond_to  :js, :html, :json
 
     def new
-        # we need @restaurant in our `simple_form_for`
         @exercise = Exercise.find(params[:exercise_id])
         @answers = Exercise.find(params[:exercise_id]).answers
-        @user_answer = UserAnswer.new(exercise_id: @exercise.id)
-        # @exercise.answers.build
-        
-      end
+        @user_answer = UserAnswer.new(exercise_id: @exercise.id)    
+    end
     
 
     def create
@@ -21,7 +17,7 @@ class UserAnswersController < ApplicationController
         if @exercise.multiple_choice?
             @user_answer.answer = @exercise.answers.find(params[:answer])
         else
-            @user_answer.answer = Answer.new(answer: params[:answer], exercise_number: @exercise.exercise_number, exercise_id: @exercise.id)
+            @user_answer.answer = Answer.new(answer: params[:answer], exercise_id: @exercise.id)
         end
 
         @user_answer.user_id = current_user.id

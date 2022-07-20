@@ -30,6 +30,9 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem "chartkick"
 gem "groupdate"
+gem 'kaminari'
+gem 'bootstrap5-kaminari-views'
+
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
